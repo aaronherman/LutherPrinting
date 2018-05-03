@@ -1,0 +1,13 @@
+Hello <Humanities Division>,
+
+We would like to inform you of a change involved in the printing system on campus. We have switched from PaperCut to a service that will save Luther College over 15% each year and provide more functionality, PrintLuther. We have already pushed the update to your workstation -- this will not require any extra work on your Luther provided workstation. 
+
+PrintLuther allows you to print to any printer on campus by selecting the location on the [web interface](<link here>). Simply select the location from the dropdown menu on the right-hand side of the screen. 
+
+We have added a sample print job to each of your PrintLuther account, and we encourage you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey [here](<link here with query parameter>).
+
+Please feel free to contact us with any questions. We have student workers ready to help during this transition.
+
+Sincerely,
+IT Department
+Ext: 1000
