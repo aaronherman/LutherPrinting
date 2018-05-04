@@ -51,12 +51,17 @@ def sendemail(email):
 	sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
 	from_email = Email("no-reply@printluther.com")
 	to_email = Email(email)
-	subject = "ENTER SUBJECT HERE"
+	subject = "Printer software changing for Faculty"
 
 	#NOTE: sendgrid allows you to create and export HTML. Use that to generate HTML for the content?
-	content = Content("text/html", """<a href="https://pathwerks.herokuapp.com/verifyuser/"""+token+"""">Please click this link to verify your account on Pathwerks.com</a>""")
+	# Call function which generates that part? 
+	content = Content("text/html", """<p>Hello <Humanities Division>,</p><p>We would like to inform you of a change involved in the printing system on campus. We have switched from PaperCut to a service that will save Luther College over 15% each year and provide more functionality, PrintLuther. We have already pushed the update to your workstation -- this will not require any extra work on your Luther provided workstation. </p><p>PrintLuther allows you to print to any printer on campus by selecting the location on the [web interface](<link here>). Simply select the location from the dropdown menu on the right-hand side of the screen. </p><p>We have added a sample print job to each of your PrintLuther account, and we encourage you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey [here](<link here with query parameter>).</p><p>Please feel free to contact us with any questions. We have student workers ready to help during this transition.</p><p>Sincerely,IT DepartmentExt: 1000</p>""")
 	mail = Mail(from_email, subject, to_email, content)
 	response = sg.client.mail.send.post(request_body=mail.get())
+	print(response)
+	print('sent message')
+
+# sendemail('hermaa02@luther.edu')
 
 @app.route('/')
 def home():
