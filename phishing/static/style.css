@@ -6,3 +6,106 @@ html, body {
     height: 100%; 
     background-attachment: fixed;
 }
+
+
+
+#loginBody { margin: 0; padding: 0; }
+#loginBody:before { display: none; }
+#loginBody .wrap { position: absolute; width: 100%; height: 100%; min-height: 700px; background: #00ae5b; background-image: radial-gradient(closest-corner,rgba(0, 28, 85,0) 60%,rgba(0, 28, 85,.5)),linear-gradient(to top left,#1F487E,#00ae5b 100%);  background-position: 50% 50%; background-repeat: no-repeat; background-size: cover; display: flex; display: -ms-flexbox; justify-content: center; align-items: center; }
+#login table { table-layout: auto; }
+#login img.logo { margin: 0 auto 1.4rem; width: auto; height: auto; }
+#login td {padding: 6px 0; }
+#login th {color: #8e959e; font-weight: normal; vertical-align: top; padding: calc(.5rem + 6px) 20px .5rem 0; text-align: left; }
+#login, #logonMessage {padding: 0; text-align: center; background: none; font-size: 1rem; color: inherit; }
+title .mf-overlay, .license-info-home {color: rgba(255,255,255,0.7); text-align: left; font-size: 0.8em; padding: 10px; position: absolute; bottom: 0; right: 0; z-index: 0; }
+.login { z-index: 999; position:relative; }
+.login input, .login select { width: 100% !important; }
+.login input[type="submit"] { width: 100% !important; padding: .8rem 1rem; font-size: 1rem !important; color: #fff !important; }
+.loginSubmit { border: 1px solid #00ae5b !important; background: #00ae5b !important; }
+.loginSubmit:hover { background: #62bb46 !important; border-color: #62bb46 !important; }
+#continueLink { margin-top: 2rem; }
+#logonMessage strong { font-size: 1.134rem; color: #8e959e; font-weight: 400; }
+.admin-login { position: relative; top: 30px; }
+#loginBody .pc-shards { position: absolute; bottom: 0; width: 600px; height: 424px; left: -30px;  opacity: .2; z-index: 2; display: none; }
+.license-expiry-home a { color : rgba(255,255,255,.7) }
+.license-info-home a { color : rgba(255,255,255,.7) }
+.license-expiry-home a:hover { color : rgba(255,255,255,1) }
+.license-info-home a:hover { color : rgba(255,255,255,1) }
+
+#login-bg { position: absolute; width: 100%; height: 100%; min-height: 700px; object-fit: cover; left: 0; top: 0; z-index: 0; }
+
+
+
+#pageactions, .box, .table-box, .box-white, table.results, #login, #wizard .box-table {
+  -moz-border-bottom-left-radius: 5px;
+  -moz-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+
+/**** Login ****/
+.login .box {
+  width: 310px;
+  margin: 11% auto 0 auto;
+  }
+#login,
+#logonMessage {
+  padding: 15px;
+  text-align: right;
+  background-color: #EEE;
+  color: #333;
+}
+
+#loginInstructions {
+    text-align: center;
+    margin: 1.4em 0pt 1em;
+}
+
+#logonMessage {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+#loginBody {
+  background-color: #E2E2E2;
+  background-image: none;
+  }
+
+#login h1 {
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#login .field {
+    width: 155px;
+}
+
+#login table {
+  width: 100%;
+  border: 0;
+  }
+  #login th {
+    padding: 2px;
+    text-align: right;
+    }
+  #login td {
+    padding: 2px;
+    text-align: left;
+    }
+
+#login img.logo {
+    width: 250px;
+    height: 64px;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+#login #register,#switchuser {
+  margin: 0.8em 0 0 0;
+  }
