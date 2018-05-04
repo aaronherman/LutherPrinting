@@ -6,3 +6,16 @@ html, body {
     height: 100%; 
     background-attachment: fixed;
 }
+
+thead {
+    background-color: royalblue; 
+    color: white; 
+}
+
+tbody {
+    background-color: whitesmoke; 
+}
+
+.table-responsive {
+    overflow-y: visible !important;
+}

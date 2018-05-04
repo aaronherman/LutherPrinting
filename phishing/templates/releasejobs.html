@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="col-sm-4"></div>
+<div class="col-sm-8 table-responsive">
+<table class="table table-hover success">
+    <thead>
+      <tr>
+        <th>Document</th>
+        <th>Pages</th>
+        <th>Cost</th>
+        <th>% of tree</th>
+        <th>Printer</th>
+        <th>Release</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Test</td>
+        <td>1</td>
+        <td>.05</td>
+        <td>.001</td>
+        <td class="form-group">
+          <select class="form-control" id="sel1">
+            <option>Main </option>
+            <option>Olin 301</option>
+            <option>Valders</option>
+            <option>Chem</option>
+          </select>
+        </td>
+        <td class="btn-group">
+          <a class="btn btn-small btn-default">Print</a>
+          <a class="btn btn-small btn-default">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Test 2</td>
+        <td>2</td>
+        <td>.08</td>
+        <td>.002</td>
+        <td class="form-group">
+          <select class="form-control" id="sel1">
+            <option>Main </option>
+            <option>Olin 301</option>
+            <option>Valders</option>
+            <option>Chem</option>
+          </select>
+        </td>
+        <td class="btn-group">
+          <a class="btn btn-small btn-default">Print</a>
+          <a class="btn btn-small btn-default">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
