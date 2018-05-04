@@ -63,7 +63,9 @@ def home():
 
 	return render_template('index.html')
 	
-
+@app.route('/releasejobs')
+def releasejobs():
+	return render_template('releasejobs.html')
 
 if __name__ == '__main__':
   app.run()
