@@ -4,15 +4,20 @@
 {% endblock %}
 
 {% block content %}
+<div class="row">
 <div class="col-sm-4"></div>
 <div class="col-sm-8 table-responsive">
 <table class="table table-hover success">
     <thead>
       <tr>
+        <th colspan=5>
+          Print Jobs Pending Release
+        </th>
+      </tr>
+      <tr>
         <th>Document</th>
         <th>Pages</th>
         <th>Cost</th>
-        <th>% of tree</th>
         <th>Printer</th>
         <th>Release</th>
       </tr>
@@ -21,8 +26,7 @@
       <tr>
         <td>Test</td>
         <td>1</td>
-        <td>.05</td>
-        <td>.001</td>
+        <td>$0.05</td>
         <td class="form-group">
           <select class="form-control" id="sel1">
             <option>Main </option>
@@ -39,8 +43,7 @@
       <tr>
         <td>Test 2</td>
         <td>2</td>
-        <td>.08</td>
-        <td>.002</td>
+        <td>$0.08</td>
         <td class="form-group">
           <select class="form-control" id="sel1">
             <option>Main </option>
@@ -56,6 +59,13 @@
       </tr>
     </tbody>
   </table>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-8">
+
+  </div>
 </div>
 
 {% endblock %}
