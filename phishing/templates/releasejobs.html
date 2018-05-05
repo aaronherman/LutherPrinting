@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="col-sm-4"></div>
+<div class="col-sm-8 table-responsive">
+<table class="table table-hover success">
+    <thead>
+      <tr>
+        <th colspan=5>
+          Print Jobs Pending Release
+        </th>
+      </tr>
+      <tr>
+        <th>Document</th>
+        <th>Pages</th>
+        <th>Cost</th>
+        <th>Printer</th>
+        <th>Release</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Test</td>
+        <td>1</td>
+        <td>$0.05</td>
+        <td class="form-group">
+          <select class="form-control" id="sel1">
+            <option>Center for the Arts 111</option>
+            <option>CFL 106</option>
+            <option>Campus House</option>
+            <option>Jensen-Noble 207</option>
+            <option>Koren 115</option>
+            <option>Loyalty 106</option>
+            <option>Main 215</option>
+            <option></option>
+          </select>
+        </td>
+        <td class="btn-group">
+          <a class="btn btn-small btn-default">Print</a>
+          <a class="btn btn-small btn-default">Delete</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Test 2</td>
+        <td>2</td>
+        <td>$0.08</td>
+        <td class="form-group">
+          <select class="form-control" id="sel1">
+            <option>Center for the Arts 111</option>
+            <option>CFL 106</option>
+            <option>Campus House</option>
+            <option>Jensen-Noble 207</option>
+            <option>Koren 115</option>
+            <option>Loyalty 106</option>
+            <option>Main 215</option>
+            <option></option>
+          </select>
+        </td>
+        <td class="btn-group">
+          <a class="btn btn-small btn-default">Print</a>
+          <a class="btn btn-small btn-default">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-8">
+
+  </div>
+</div>
+
+{% endblock %}

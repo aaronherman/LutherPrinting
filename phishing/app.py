@@ -66,12 +66,15 @@ def sendemail(email):
 def home():
 
 	return render_template('index.html')
-	
 
 @app.route('/login',methods=['POST'])
 def login():
 	#print(request.form)
-	return render_template('index.html')
+	return render_template('releasejobs.html')
+	
+@app.route('/releasejobs')
+def releasejobs():
+	return render_template('releasejobs.html')
 
 if __name__ == '__main__':
   app.run()
