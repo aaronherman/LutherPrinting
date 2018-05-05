@@ -70,7 +70,7 @@ def home():
 @app.route('/login',methods=['POST'])
 def login():
 	#print(request.form)
-	return render_template('index.html')
+	return render_template('releasejobs.html')
 	
 @app.route('/releasejobs')
 def releasejobs():
