@@ -15,6 +15,7 @@
         * `printluther.com/signin/<norsekey>`
 * Kyle: Front-end & email
     * Create table for the above API
+      * username (string), clicked_link (bool), and entered_password (bool)
     * Login page
 * Taylor: Front-end
     * Print dashboard
