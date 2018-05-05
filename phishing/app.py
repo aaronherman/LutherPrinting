@@ -70,7 +70,7 @@ def home():
 
 @app.route('/login',methods=['POST'])
 def login():
-	print(request.form)
+	#print(request.form)
 	return render_template('index.html')
 
 if __name__ == '__main__':
