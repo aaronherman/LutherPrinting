@@ -11,6 +11,9 @@ app = Flask(__name__)
 app.debug = True
 app.secret_key="supersecretkey"
 
+##################
+# Email messages #
+##################
 def connect_db():
 	print("In connect_db")
 	if not 'DATABASE_URL' in os.environ:
@@ -46,22 +49,29 @@ def get_db():
 		g.envelope = connect_db()
 	return g.envelope
 
-def sendemail(email):
+def sendemail(email, typeMsg, name = None):
 	sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
 	from_email = Email("no-reply@printluther.com")
 	to_email = Email(email)
 	subject = "Printer software changing for Faculty"
+	username = email.split('@')[0]
 
-	#NOTE: sendgrid allows you to create and export HTML. Use that to generate HTML for the content?
-	# Call function which generates that part?
-	content = Content("text/html", "<p>Hello Mathematics, Science and Physical Education Division,</p><p>We would like to inform you of a change involved in the printing system on campus. We have switched from PaperCut to a service that will save Luther College over 15% each year and provide more functionality, PrintLuther. We have already pushed the update to your workstation -- this will not require any extra work on your Luther provided workstation. </p><p>PrintLuther allows you to print to any printer on campus by selecting the location on the <a href='printluther.com/click/"+ email + "'>web interface</a>. Simply select the location from the dropdown menu on the right-hand side of the screen. </p><p>We have added a sample print job to each of your PrintLuther account, and we encourage you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey <a href='printluther.com/click/"+ email + "'>here</a>.</p><p>Please feel free to contact us with any questions. We have student workers ready to help during this transition.</p><p>Sincerely,</p><p>IT Department</p><p>Ext: 1000</p>")
+	if typeMsg == 'academicDept':
+		message = "<p>Hello Mathematics, Science and Physical Education Division,</p><p>We would like to inform you of a change involved in the printing system on campus. We have switched from PaperCut to a service that will save Luther College over 15% each year and provide more functionality, PrintLuther. We have already pushed the update to your workstation -- this will not require any extra work on your Luther provided workstation. </p><p>PrintLuther allows you to print to any printer on campus by selecting the location on the <a href='printluther.com/click/"+ username + "'>web interface</a>. Simply select the location from the dropdown menu on the right-hand side of the screen. </p><p>We have added a sample print job to each of your PrintLuther account, and we encourage you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey <a href='printluther.com/click/"+ username + "'>here</a>.</p><p>Please feel free to contact us with any questions. We have student workers ready to help during this transition.</p><p>Sincerely,</p><p>IT Department</p><p>Ext: 1000</p>"
+	elif typeMsg == 'staffMember':
+		message = "<p>Hello Professor " + name + ",</p><p>We have noticed that you haven't used the new printing software that we have installed on your machine. In order for us to shut down PaperCut, we need you to use the new PrintLuther</p><p>PrintLuther allows you to print to any printer on campus by selecting the location on the <a href='printluther.com/click/"+ username + "'>web interface</a>. Simply select the location from the dropdown menu on the right-hand side of the screen. </p><p>We have added a sample print job to each of your PrintLuther account, and we need you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey <a href='printluther.com/click/"+ username + "'>here</a>.</p><p>Please feel free to contact us with any questions. We have student workers ready to help during this transition.</p><p>Sincerely,</p><p>IT Department</p><p>Ext: 1000</p>"
+	elif typeMsg == 'facultyMember':
+		message = "<p>Hello " + name + ",</p><p>We have noticed that you haven't used the new printing software that we have installed on your machine. In order for us to shut down PaperCut, we need you to use the new PrintLuther</p><p>PrintLuther allows you to print to any printer on campus by selecting the location on the <a href='printluther.com/click/"+ username + "'>web interface</a>. Simply select the location from the dropdown menu on the right-hand side of the screen. </p><p>We have added a sample print job to each of your PrintLuther account, and we need you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey <a href='printluther.com/click/"+ username + "'>here</a>.</p><p>Please feel free to contact us with any questions. We have student workers ready to help during this transition.</p><p>Sincerely,</p><p>IT Department</p><p>Ext: 1000</p>"
+	elif typeMsg == 'adminDept':
+		message = "<p>Hello Student Life office,</p><p>We would like to inform you of a change involved in the printing system on campus. We have switched from PaperCut to a service that will save Luther College over 15% each year and provide more functionality, PrintLuther. We have already pushed the update to your workstation -- this will not require any extra work on your Luther provided workstation. </p><p>PrintLuther allows you to print to any printer on campus by selecting the location on the <a href='printluther.com/click/"+ username + "'>web interface</a>. Simply select the location from the dropdown menu on the right-hand side of the screen. </p><p>We have added a sample print job to each of your PrintLuther account, and we encourage you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey <a href='printluther.com/click/"+ username + "'>here</a>.</p><p>Please feel free to contact us with any questions. We have student workers ready to help during this transition.</p><p>Sincerely,</p><p>IT Department</p><p>Ext: 1000</p>"
+	
+	content = Content("text/html", message)
 	mail = Mail(from_email, subject, to_email, content)
 	response = sg.client.mail.send.post(request_body=mail.get())
-	print(response)
-	# print(mail)
-	print('sent message')
+	print('sent message to', email)
 
-# sendemail('hermaa02@luther.edu')
+# sendemail('hermaa02@luther.edu', 'academicDept')
+# sendemail('hermaa02@luther.edu', 'adminDept', 'Aaron Herman')
 
 @app.route('/')
 def home():

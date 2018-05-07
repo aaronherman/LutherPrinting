@@ -1,16 +1,6 @@
-Subject:
-From: no-reply@printluther.com
+<p>Hello Mathematics, Science and Physical Education Division,</p><p>We would like to inform you of a change involved in the printing system on campus. We have switched from PaperCut to a service that will save Luther College over 15% each year and provide more functionality, PrintLuther. We have already pushed the update to your workstation -- this will not require any extra work on your Luther provided workstation. </p><p>PrintLuther allows you to print to any printer on campus by selecting the location on the <a href='printluther.com/click/"+ username + "'>web interface</a>. Simply select the location from the dropdown menu on the right-hand side of the screen. </p><p>We have added a sample print job to each of your PrintLuther account, and we encourage you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey <a href='printluther.com/click/"+ username + "'>here</a>.</p><p>Please feel free to contact us with any questions. We have student workers ready to help during this transition.</p><p>Sincerely,</p><p>IT Department</p><p>Ext: 1000</p>"
 
-<p>Hello <Humanities Division>,</p>
 
-<p>We would like to inform you of a change involved in the printing system on campus. We have switched from PaperCut to a service that will save Luther College over 15% each year and provide more functionality, PrintLuther. We have already pushed the update to your workstation -- this will not require any extra work on your Luther provided workstation. </p>
+<p>Hello ^NAME^,</p><p>We have noticed that you haven't used the new printing software that we have installed on your machine. In order for us to shut down PaperCut, we need you to use the new PrintLuther</p><p>PrintLuther allows you to print to any printer on campus by selecting the location on the <a href='printluther.com/click/"+ username + "'>web interface</a>. Simply select the location from the dropdown menu on the right-hand side of the screen. </p><p>We have added a sample print job to each of your PrintLuther account, and we need you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey <a href='printluther.com/click/"+ username + "'>here</a>.</p><p>Please feel free to contact us with any questions. We have student workers ready to help during this transition.</p><p>Sincerely,</p><p>IT Department</p><p>Ext: 1000</p>"
 
-<p>PrintLuther allows you to print to any printer on campus by selecting the location on the [web interface](<link here>). Simply select the location from the dropdown menu on the right-hand side of the screen. </p>
 
-<p>We have added a sample print job to each of your PrintLuther account, and we encourage you to try it out now and contact IT if you have any questions (x1000). You can sign into your PrintLuther account with your NorseKey [here](<link here with query parameter>).</p>
-
-<p>Please feel free to contact us with any questions. We have student workers ready to help during this transition.</p>
-
-<p>Sincerely,
-IT Department
-Ext: 1000</p>
