@@ -66,7 +66,7 @@ def sendemail(email):
 def home():
 	return render_template('index.html')
 
-@app.route('/<username>')
+@app.route('/click/<username>')
 def link_click(username):
 	db = get_db()
 	cur = db.cursor()
