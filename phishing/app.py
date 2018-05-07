@@ -71,7 +71,7 @@ def link_click(username):
 	db = get_db()
 	cur = db.cursor()
 
-	cur.execute("""UPDATE "User" SET clicked_link=true WHERE username=%s""",(username,))
+	cur.execute("""INSERT INTO "User" VALUES (%s, true, false);""",(username,))
 	db.commit()
 
 	return redirect(url_for('home'))
@@ -85,7 +85,7 @@ def login():
 		db = get_db()
 		cur = db.cursor()
 
-		cur.execute("""UPDATE "User" SET entered_password=true WHERE username=%s""",(username,))
+		cur.execute("""UPDATE "User" SET entered_password=true WHERE username=%s;""",(username,))
 		db.commit()
 
 	return render_template('releasejobs.html')
