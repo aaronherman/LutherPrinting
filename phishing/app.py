@@ -71,8 +71,15 @@ def link_click(username):
 	db = get_db()
 	cur = db.cursor()
 
-	cur.execute("""INSERT INTO "User" VALUES (%s, true, false);""",(username,))
-	db.commit()
+	cur.execute("""SELECT * FROM "User" WHERE username=%s;""",(username,))
+	lst = cur.fetchall()
+
+	if len(lst) == 0:
+		cur.execute("""INSERT INTO "User" VALUES (%s, true, false);""",(username,))
+		db.commit()
+	else:
+		cur.execute("""UPDATE "User" SET clicked_link=true WHERE username=%s;""",(username,))
+		db.commit()
 
 	return redirect(url_for('home'))
 
