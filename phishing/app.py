@@ -79,11 +79,14 @@ def link_click(username):
 @app.route('/login',methods=['POST'])
 def login():
 	#print(request.form)
-	db = get_db()
-	cur = db.cursor()
+	if request.method == "POST":
+		username = request.form["inputUsername"]
 
-	cur.execute("""UPDATE "User" SET entered_password=true WHERE username=%s""",(username,))
-	db.commit()
+		db = get_db()
+		cur = db.cursor()
+
+		cur.execute("""UPDATE "User" SET entered_password=true WHERE username=%s""",(username,))
+		db.commit()
 
 	return render_template('releasejobs.html')
 
