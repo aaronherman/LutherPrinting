@@ -11,9 +11,6 @@ app = Flask(__name__)
 app.debug = True
 app.secret_key="supersecretkey"
 
-##################
-# Email messages #
-##################
 def connect_db():
 	print("In connect_db")
 	if not 'DATABASE_URL' in os.environ:
